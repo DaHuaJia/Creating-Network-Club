@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>轮播图</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#box1{
+			height:500px;
+			width:800px;
+			position:absolute;
+			left:230px;
+			top:20px;
+		}
+		#img{
+			height:100%;
+			width:100%;
+		}
+		#buttonLeft{       /*设置按钮1样式*/
+			width:50px;
+			height:50px;
+			background:rgba(112,112,112,0.4);
+			border-radius:50%;
+			position:absolute;
+			left:6px;
+			top:240px;
+			font-size:40px;
+			text-align:center;
+			line-height:50px;
+			color:white;
+			cursor:pointer;
+			display:none;
+			CSS user-select:none;
+		}
+		#buttonLeft:hover {          /*伪类*/
+			background:rgba(112,112,112,1);
+		}
+		#buttonRight{         /*设置按钮2样式*/
+			width:50px;
+			height:50px;
+			background:rgba(112,112,112,0.4);
+			border-radius:50%;
+			position:absolute;
+			right:6px;
+			top:240px;
+			font-size:40px;
+			text-align:center;
+			line-height:50px;
+			color:white;
+			cursor:pointer;
+			display:none;
+		}
+		#buttonRight:hover { 
+			background:rgba(112,112,112,1);
+		}
+		li{
+			list-style:none;
+			height:20px;
+			width:20px;
+			background:#FFEC8B;
+			border-radius:50%;
+			cursor:pointer;
+		}
+		#li1{
+			position:absolute;
+			top:530px;
+			left:570px;
+		}
+		#li2{
+			position:absolute;
+			top:530px;
+			left:600px;
+		}
+		#li3{
+			position:absolute;
+			top:530px;
+			left:630px;
+		}
+		#li4{
+			position:absolute;
+			top:530px;
+			left:660px;
+		}
+		#li1div{
+			height:130px;
+			width:130px;
+			position:absolute;
+			top:394px;
+			left:508px;
+			display:none;
+		}
+		#li2div{
+			height:130px;
+			width:130px;
+			position:absolute;
+			top:394px;
+			left:538px;
+			display:none;
+		}
+		#li3div{
+			height:130px;
+			width:130px;
+			position:absolute;
+			top:394px;
+			left:568px;
+			display:none;
+		}
+		#li4div{
+			height:130px;
+			width:130px;
+			position:absolute;
+			top:394px;
+			left:598px;
+			display:none;
+		}
+		ul div img{
+			height:100%;
+			width:100%;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var i = 1;
+			var oBox = document.getElementById('box1');
+			var oBtn1 = document.getElementById('buttonLeft');
+			var oBtn2 = document.getElementById('buttonRight');
+			var oImg = document.getElementById('img');
+			li1.style.background = '#FFB90F';
+			oBox.onmouseover = function(){     /*设置按钮显示消失*/
+				oBtn1.style.display = 'block';
+				oBtn2.style.display = 'block';
+			};
+			oBox.onmouseout = function(){
+				oBtn1.style.display = 'none';
+				oBtn2.style.display = 'none';
+			};
+			oBtn1.onclick = function(){       /*设置按钮点击轮播和黄点提示*/
+				if(i == 1) i = 5;
+				i--;
+				oImg.src = i + '.jpg';
+				li1.style.background = '#FFEC8B';
+				li2.style.background = '#FFEC8B';
+				li3.style.background = '#FFEC8B';
+				li4.style.background = '#FFEC8B';
+				var Li = document.getElementById('li' + i);
+				Li.style.background = '#FFB90F';
+			};
+			oBtn2.onclick = function(){
+				if(i == 4) i = 0;
+				i++;
+				oImg.src = i + '.jpg';
+				li1.style.background = '#FFEC8B';
+				li2.style.background = '#FFEC8B';
+				li3.style.background = '#FFEC8B';
+				li4.style.background = '#FFEC8B';
+				var Li = document.getElementById('li' + i);
+				Li.style.background = '#FFB90F';
+			};
+			li1.onmouseover = function(){        //设置查看缩略图
+				li1div.style.display = 'block';
+			};
+			li1.onmouseout = function(){
+				li1div.style.display = 'none';
+			};
+			li2.onmouseover = function(){
+				li2div.style.display = 'block';
+			};
+			li2.onmouseout = function(){
+				li2div.style.display = 'none';
+			};
+			li3.onmouseover = function(){
+				li3div.style.display = 'block';
+			};
+			li3.onmouseout = function(){
+				li3div.style.display = 'none';
+			};
+			li4.onmouseover = function(){
+				li4div.style.display = 'block';
+			};
+			li4.onmouseout = function(){
+				li4div.style.display = 'none';
+			};
+			li1.onclick = function(){      //设置黄点点击
+				oImg.src = '1.jpg';
+				i = 1;
+				li1.style.background = '#FFB90F';
+				li2.style.background = '#FFEC8B';
+				li3.style.background = '#FFEC8B';
+				li4.style.background = '#FFEC8B';
+			};
+			li2.onclick = function(){
+				oImg.src = '2.jpg';
+				i = 2;
+				li2.style.background = '#FFB90F';
+				li1.style.background = '#FFEC8B';
+				li3.style.background = '#FFEC8B';
+				li4.style.background = '#FFEC8B';
+			};
+			li3.onclick = function(){
+				oImg.src = '3.jpg';
+				i = 3;
+				li3.style.background = '#FFB90F';
+				li1.style.background = '#FFEC8B';
+				li2.style.background = '#FFEC8B';
+				li4.style.background = '#FFEC8B';
+			};
+			li4.onclick = function(){
+				oImg.src = '4.jpg';
+				i = 4;
+				li4.style.background = '#FFB90F';
+				li1.style.background = '#FFEC8B';
+				li2.style.background = '#FFEC8B';
+				li3.style.background = '#FFEC8B';
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="box1">
+		<img id="img" src="1.jpg" /> 
+		<div id="buttonLeft"> < </div>
+		<div id="buttonRight"> > </div>
+	</div>
+	<ul>
+		<li id="li1"></li><div id="li1div"><img src="1.jpg" /></div>
+		<li id="li2"></li><div id="li2div"><img src="2.jpg" /></div>
+		<li id="li3"></li><div id="li3div"><img src="3.jpg" /></div>
+		<li id="li4"></li><div id="li4div"><img src="4.jpg" /></div>
+	</ul>
+</body>
+</html>

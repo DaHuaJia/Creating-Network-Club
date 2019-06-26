@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>逻辑运算符</title>
+	<script>
+		var x = 6;
+		var y = 3;
+	
+		// &&
+		if(x ==6 && y ==3){ //都满足条件就是true
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		
+		if(x ==6 && y == 2){ //都满足条件就是true
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		
+		var a = 5;
+		if(a >1 && a < 10){
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		
+		// ||
+		if(x == 6 || y == 2){  //满足其中一个条件就是true
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		
+		if(x == 5 || y == 2){  //满足其中一个条件就是true
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		
+		// 都属于短路运算符
+		// ||
+		var a = 3;
+		if( (a == 2) || (a = 5) == 5 ){  
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		console.log(a);
+		
+		var a = 3;
+		if( (a == 3) || (a = 5) == 5 ){  
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		console.log(a);
+		
+		var a = 3;
+		if( (a == 2) && (a = 5) == 5 ){  
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		console.log(a);
+		
+		var a = 3;
+		if( (a == 3) && (a = 5) == 5 ){  
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		console.log(a);
+		
+		
+		// &
+		var a = 3;
+		if( (a == 2) & (a = 5) == 5 ){  
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		console.log(a);
+		
+		// &
+		var a = 3;
+		if( (a == 2) | (a = 5) == 5 ){  
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		console.log(a);
+		
+		
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

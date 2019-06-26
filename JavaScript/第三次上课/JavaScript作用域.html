@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript 作用域</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 作用域可访问变量的集合
+		// console.log(carName);
+		myFunction();
+		myFunction2();
+		
+		//  全局变量
+		
+		var carName = "bbb";
+		console.log(carName);
+		myFunction3();
+		
+		function myFunction() {
+		
+			var carName = "Volvo"; // 局部变量
+
+			// 函数内可调用 carName 变量
+			console.log(carName);
+		}
+		
+		function myFunction2() {
+		
+			var carName = "aaa"; // 局部变量
+
+			// 函数内可调用 carName 变量
+			console.log(carName);
+		}
+		
+		function myFunction3() {
+			console.log(carName);
+		}
+		
+		
+		
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

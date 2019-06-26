@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			height: 50px;
+			margin-top:20px;
+			background-color:blue;
+
+		}
+		li{
+			background-color: red;	/*1*/
+		}
+
+		ol li{
+			background-color:blue; /*1+1*/
+		}
+		
+		.li-1{
+			background-color: green; /* class 10 */
+		}
+		.li-2{
+			background-color: black; /* 10 */
+		}
+
+		#id-1{
+			background-color: grey;
+		}
+		/*
+		 同级样式默认后者覆盖前者；
+
+		 类型选择符(1) < class选择(10) < id(100) < 行间样式
+ 
+		*/
+	</style>
+
+</head>
+<body>
+	<ol>
+		<li class="li-1"  	></li>
+		<li class="li_1 li-2"></li>
+		<li class="li_1 li-2" id="id-1"></li>
+		<li class="li_1 li-2" id="id-1" style="background-color:red;"></li>
+		<li></li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>显示&隐藏</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		div{
+			height:200px;
+			width:200px;
+			background-color:yellow;
+			margin-top:18px;
+			margin-left:18px;
+			display:none;
+			font-size:20px;
+			color:red;
+			text-align:center;
+			line-height:200px;
+		}
+		#span{
+			display:none;
+		}
+</style>
+</head>
+<body>
+
+	<span style="margin-left:18px;">点击按钮会显示内容：</span>
+	<input id="button1" type="button" value="显示"/>
+	<input id="button2" type="button" value="隐藏"/>
+	<div id="div"><span id="span">我爱你</span></div>
+	
+	<script type="text/javascript">
+		document.getElementById('button1').onclick = show;
+		document.getElementById('button2').onclick = hide;
+		document.getElementById('div').onmouseover = show1;
+		document.getElementById('div').onmouseout = hide1;
+		
+		function show(){
+			document.getElementById('div').style.display ='block';
+		}
+		function hide(){
+			document.getElementById('div').style.display ='none';
+		}
+		function show1(){
+			document.getElementById('span').style.display ='block';
+		}
+		function hide1(){
+			document.getElementById('span').style.display ='none';
+		}
+		
+	</script>
+	
+</body>
+</html>

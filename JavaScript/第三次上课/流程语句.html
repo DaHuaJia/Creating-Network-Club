@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>流程语句</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		var a = 10;
+		if(a >= 100){
+			console.log("a大于等于100");
+		} else if(a >= 10){
+			console.log("a大于等于10小于等于100");
+		} else if(a < 10){
+			console.log("a小于10");
+		}
+
+	
+	
+		// while 循环
+		var i = 0;
+		while(i <= 10){
+			document.write(i);
+			i++;
+		}
+	
+	
+	
+		// 打印1到100的和
+		var total = 0;
+		var i = 1;
+		while(i <= 100){
+			total += i;
+			i++;
+		}
+		
+		console.log(total);
+	
+		console.log("total");
+	
+		//   2.	计算1到10的阶乘
+		var total = 1;
+		var i = 1;
+		while( i <= 10){
+			total *= i++;
+		}
+		console.log(total);
+
+	
+	/*
+		// do/while 循环
+		do{
+			// 需要执行的代码
+		}
+		while (条件);
+	*/
+		var total = 1;i = 1;
+		do{
+			total = total + 1 / i;
+			i++;
+		}while(i <= 10);
+		console.log(total);
+		
+	console.log("-----------------");
+		
+		var total = 0;
+		var i = 1;
+		do{
+			total += i;
+			i++;
+		}while(i <= 100);
+		console.log(total);
+
+		var a,b,i = 4;
+		a = i++;    // 先计算，后引用。
+		b = ++i;    // 先引用，后计算。
+		console.log(a);
+		console.log(b);
+		
+	/*	
+		// JavaScript for 循环   循环可以将代码块执行指定的次数
+		for (循环之前执行语句（只执行一次）; 循环判断条件; 结束本次循环后执行的语句)
+		{
+		  // 被执行的代码块
+		}
+
+	*/
+	
+		var total = 0;
+		var i;
+		for(i = 1;i <= 100;i++){
+			total += i;
+		}
+		console.log(total);
+		console.log(i);
+
+
+
+		var total,i;
+		for(total = 1,i = 1; i <= 10; i++){
+			total *= i;
+		}
+		console.log(total);
+
+		var total,i;
+		for(total = 1,i = 1; i <=10; i++){
+			total += 1 / i;
+		}
+		console.log(total);
+	
+	// JavaScript Break 和 Continue 语句
+	
+	
+		
+	document.write("</br>");
+	
+		// 1. Break
+		
+		var i = 0;
+		while(i < 10){
+			document.write(i + "\n");
+			if(i == 7){
+				break;  // 直接退出循环
+			}
+			i++;
+		}
+	document.write("&nbsp &nbsp &nbsp break 直接退出循环");
+	document.write("</br>");
+	
+		// 2. continue  退出本次循环
+		var i = 1;
+		while(i < 10){
+			i++; 
+			if(i == 5)
+				continue;
+			document.write(i + "\n");
+		}
+	document.write("&nbsp &nbsp &nbsp break continue 退出本次循环，接着下一次循环");
+	document.write("</br>");
+	
+	
+	// switch 语句
+		var n = 10; 
+		switch(n) // n 是整数或者字符串  
+		{
+			case 1:  // 必须是常量
+				document.write(1);
+				break;
+			case 2:  // 必须是常量
+				document.write(2);
+				break;
+			case 3:  // 必须是常量
+				document.write(3);
+				break;
+			case 4:  // 必须是常量
+				document.write(4);
+				break;
+			default: // 如果没有匹配就走这里
+				document.write("没有匹配的条件");
+				break;
+		}
+		
+	document.write("</br>");
+	
+	//显示日期和星期
+		
+		var day = new Date().getDay();
+		var come;
+		switch(day){
+			case 0:
+				x = "Today is Sunday.";
+				break;
+			case 1:
+				x = "Today is Monday.";
+				break;
+			case 2:
+				x = "Today is Tuesday.";
+				break;
+			case 3:
+				x = "Today is Wednesday.";
+				break;
+			case 4:
+				x = "Today is Thursday.";
+				break;
+			case 5:
+				x = "Today is Friday.";
+				break;
+			case 6:
+				x = "Today is Saturday."
+				break;
+		}
+			document.write(x);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>sss</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		div {
+			width: 800px;
+			height: 500px;
+			position: relative;
+			margin-left: 70px;
+			margin-top: 100px;
+			float: left;
+		}
+
+		img {
+			position: absolute;
+			width: 800px;
+			height: 500px;
+			display: none;
+		}
+
+		a {
+			display: block;
+			position: absolute;
+			top: 50px;
+			font-size: 30px;
+			text-decoration: none;
+		}
+
+		#btn2 {
+			left: 50px;
+		}
+
+		#btn1 {
+			left: 250px;
+		}
+
+		#div1 ul {
+			position: absolute;
+			margin-left: 50%;
+			bottom: -70px;
+			left: -180px;
+		}
+
+		#div2 ul {
+			position: absolute;
+			margin-left: 50%;
+			bottom: -70px;
+			left: -140px;
+		}
+
+		div ul li {
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: green;
+			float: left;
+			margin-left: 20px;
+			border-radius: 50%;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oBtn1 = document.getElementById('btn1');
+			var oBtn2 = document.getElementById('btn2');
+			var oDiv1 = document.getElementById('div1');
+			var oDiv2 = document.getElementById('div2');
+			var aImg1 = oDiv1.getElementsByTagName('img');
+			var aImg2 = oDiv2.getElementsByTagName('img');
+			var aLi1 = oDiv1.getElementsByTagName('li');
+			var aLi2 = oDiv2.getElementsByTagName('li');
+			var num1 = 0;
+			var num2 = 0;
+
+			for (var i = 0; i < aLi1.length; i++)
+				aLi1[i].index = i;
+			for (var i = 0; i < aLi2.length; i++)
+				aLi2[i].index = i;
+			oBtn1.onclick = function () {
+				for (var i = 0; i < aImg1.length; i++)
+					aImg1[i].style.display = 'none';
+				for (var i = 0; i < aImg2.length; i++)
+					aImg2[i].style.display = 'none';
+				num1 = ++num1 % aImg1.length;
+				num2 = ++num2 % aImg2.length;
+				aImg1[num1].style.display = 'block';
+				aImg2[num2].style.display = 'block';
+			};
+			oBtn2.onclick = function () {
+				for (var i = 0; i < aImg1.length; i++)
+					aImg1[i].style.display = 'none';
+				for (var i = 0; i < aImg2.length; i++)
+					aImg2[i].style.display = 'none';
+				num1 = (--num1 + aImg1.length) % aImg1.length;
+				num2 = (--num2 + aImg2.length) % aImg2.length;
+				aImg1[num1].style.display = 'block';
+				aImg2[num2].style.display = 'block';
+			};
+			for (var i = 0; i < aLi1.length; i++) {
+				aLi1[i].onclick = function () {
+					for (var i = 0; i < aImg1.length; i++) {
+						aImg1[i].style.display = 'none';
+					}
+					aImg1[this.index].style.display = 'block';
+					num1 = this.index;
+				};
+			}
+			for (var i = 0; i < aLi2.length; i++) {
+				aLi2[i].onclick = function () {
+					for (var i = 0; i < aImg2.length; i++) {
+						aImg2[i].style.display = 'none';
+					}
+					aImg2[this.index].style.display = 'block';
+					num2 = this.index;
+				};
+			}
+		};
+	</script>
+</head>
+
+<body>
+	<a id="btn1" href="#">下一组图片</a>
+	<a id="btn2" href="#">上一组图片</a>
+	<div id="div1">
+		<img style="display: block" src="1.jpg" />
+		<img src="2.jpg" />
+		<img src="3.jpg" />
+		<img src="4.jpg" />
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="div2">
+		<img style="display: block" src="1.jpg" />
+		<img src="2.jpg" />
+		<img src="3.jpg" />
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+
+</html>

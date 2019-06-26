@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>absolute and relative</title>
+	<style>
+	    *{
+		    margin:0px;
+			width:0px;
+	/*清除系统默认*/
+		}
+		.wrap1{
+		    border:1px solid #ccc;
+			height:300px;
+			width:300px;
+			margin:0px auto;
+			position:relative;
+			margin-bottom:15px;
+		}
+		.box1{
+		    height:100px;
+			width:100px;
+			background-color:blue;
+			position:absolute;
+			left:100px;
+			top:100px;
+		} 
+	/*对比*/
+		.wrap2{
+		    border:1px solid #ccc;
+			height:300px;
+			width:300px;
+			margin:0px auto;
+			position:absolute;
+		}
+		.box2{
+		    height:100px;
+			width:100px;
+			background-color:blue;
+			position:relative;
+			left:100px;
+			top:100px;
+		}
+	</style>
+</head>
+<body>
+    <div class="wrap1">
+	    <div class="box1"></div>
+	</div>
+	
+	<div class="wrap2">
+	    <div class="box2"></div>
+	</div>
+</body>
+</html>

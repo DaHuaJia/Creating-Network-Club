@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>sss</title>
+		<style>
+			* {padding: 0; margin: 0;}
+			li {
+				list-style: none;
+			}
+			#list {
+				margin: 0 auto;
+				width: 240px;
+				border: 1px solid black;
+			}
+			#list h2{
+				background: url(ico1.gif) no-repeat 5px center #ccc;
+				height: 30px;
+				border: 1px solid black;
+				line-height: 30px;
+				text-indent: 30px;
+			}
+			#list .active {
+				background: url(ico2.gif) no-repeat 5px center yellow;
+			}
+			#list ul {display: none;}
+			#list ul li {
+				line-height: 24px;
+				background: #ff6;
+				border: 1px solid black;
+			}
+			#list ul .hover {
+				background: #66f;
+			}
+		</style>
+		<script>
+			window.onload = function () {
+				var oUl = document.getElementById('list');
+				var aH2 = oUl.getElementsByTagName('h2');
+				var aUl = oUl.getElementsByTagName('ul');
+				var aLi = null;
+				var arr_li = [];
+
+				for (var i = 0; i < aH2.length; i++) {
+					aH2[i].index = i;
+					aH2[i].onclick = function () {
+						for (var i = 0; i < aH2.length; i++) {
+							if (aH2[i] != this) {
+								aUl[i].style.display = 'none';
+								if (aH2[i].className = 'active') 
+									aH2[i].className = '';
+							}
+						}
+						if (this.className == '') {
+							aUl[this.index].style.display = 'block';
+							this.className = 'active';
+						} else {
+							aUl[this.index].style.display = 'none';
+							this.className = '';
+						}
+					};
+				}
+				for (var i = 0; i < aUl.length; i++) {
+					aLi = aUl[i].getElementsByTagName('li');
+					for (j = 0; j < aLi.length; j++) {
+						arr_li.push(aLi[j]);
+					}
+				}
+				for (var i = 0; i < arr_li.length; i++) {
+					arr_li[i].onclick = function () {
+						for (var i = 0; i < arr_li.length; i++) {
+							if (arr_li[i] != this) {
+								arr_li[i].className = '';
+							}
+						}
+						if (this.className == '') {
+							this.className = 'hover';
+						} else {
+							this.className = '';
+						}
+					};
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<ul id="list">
+			<li>
+				<h2>我的好友</h2>
+				<ul>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+				</ul>
+			</li>
+			<li>
+				<h2>企业</h2>
+				<ul>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+				</ul>
+			</li>
+			<li>
+				<h2>黑名单</h2>
+				<ul>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

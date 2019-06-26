@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-热身课程</title>
+	<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+		list-style:none;
+	}
+	#lis{
+		width:70px; 
+		height:30px;
+		position:absolute; 
+		top:30px; 
+		left:100px; 
+		background:#FF9; 
+	}
+	#ul1{
+		width:140px;
+		background:yellow;
+		border:1px solid black;
+		display:none;
+	}
+	#link{
+		border:1px solid black;
+		display:block; 
+		width:70px;
+		line-height:30px; 
+		text-align:center; 
+		text-decoration:none; 
+		color:#000; 
+		background:#f1f1f1;
+	}
+	#ul1 li{
+		cursor:pointer;
+		text-align:center; 
+		line-height:30px;
+	}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var li = document.getElementById('lis'); 
+			var ul = document.getElementById('ul1'); 
+			var a = document.getElementById('link');
+
+			li.onmouseover = function (){ 
+				ul.style.display = 'block'; 
+				a.style.borderBottom = 'none';
+				a.style.background = 'yellow'; 
+			}; 
+			li.onmouseout = function hide(){ 
+				ul.style.display = 'none'; 
+				a.style.borderBottom = '1px solid black';
+				a.style.background = '#f1f1f1'; 
+			};
+		};
+	</script>
+</head>
+<body>
+<ul>
+	<li id="lis">
+		<a id="link" href="#">微博</a>
+    <ul id="ul1">
+    	<li>私信</li>
+    	<li>评论</li>
+    	<li>@我</li>
+    </ul>
+ 	</li>
+</ul>
+</body>
+</html>

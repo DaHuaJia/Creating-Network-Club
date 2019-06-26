@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>JS中的属性操作</title>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		window.onload = function (){
+			button1.onclick = function(){
+				p1.innerHTML = text1.value;
+				alert(text1.value);
+			};
+			button2.onclick = function(){
+				img.src = text2.value;
+			};
+		};
+	</script>
+</head>
+<body>
+	<input id="text1" type="text" placeholder="用户名或邮件地址" />
+	<select id="select1">
+		<option value="北京">北京</option>
+		<option value="南昌">南昌</option>
+		<option value="赣州">赣州</option>
+	</select>
+	<input id="button1" type="button" value="按钮" />
+	<br/>
+	<p id="p1"></p>
+	<br/>
+	<input id="text2" type="text" placeholder="输入您的图片网址" />
+	<input id="button2" type="button" value="搜索" />
+	<div style="height:300px,widht:300px">
+	<img id="img" src="" style="height:100%,width:100%"/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>比较和逻辑运算符</title>
+	<script type="text/javascript">
+		console.log("这是布尔类型的数值，只有true和false两个值。");
+		var flag1 = true;
+		var flag2 = false;
+		console.log("判断语气");
+		var a = 4;
+		if(a>3){
+			console.log("这是对的");
+		}else{
+			console.log("这是错的");
+		}
+		
+		var a = "对";
+		var b = "错";
+		
+		if(true){
+		    console.log(a);
+		}else{
+			console.log(b);
+		}
+		if(false){
+		    console.log(a);
+		}else{
+			console.log(b);
+		}
+		
+		console.log("数字0在if中等价于false");
+		
+		if(0){
+		    console.log(a); 
+		}else{
+		    console.log(b);
+		}
+		console.log("数字非0在if中等价于true");
+		if(1){
+		    console.log(a);
+		}else{
+		    console.log(b);
+		}
+		if(4){
+			console.log(a);
+		}else{
+		    console.log(b);
+		}
+		console.log('""里有字符就是就是true,空格键也是一个字符。');
+		if("ab3"){
+			console.log(a);
+		}else{
+			console.log(b);
+		}
+		if("  "){
+			console.log(a);
+		}else{
+			console.log(b);
+		}
+		console.log('""里没有字符就是false.');
+		if(""){
+			console.log(a);
+		}else{
+		    console.log(b);
+		}
+		
+		console.log("赋值语句");
+		var c = 6;
+		if(c ==6){
+			console.log(c);
+		}else{
+			c = 8;
+			console.log(c);
+		}
+		
+		// !=
+		if(5 != "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		//只有在类型相同时才会进行比较。
+		
+		
+		// !==
+		if(5 !== "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		//类型不同时会转化成类型相同时进行比较。
+		
+		var myStr = "I am \"double quoted\" string inside \"double quoted\" ";
+		console.log(myStr);
+		
+		var firstName = "guomingde";
+			console.log( firstName.length );
+			
+	</script>
+	<style>
+	
+	</style>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

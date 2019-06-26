@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>absolute</title>
+	<style>
+	    .box1{
+		    background-color:red;
+			height:120px;
+			width:120px;
+			position:absolute;<!-- 脱离文档流-->
+		}
+		.box2{
+		    background-color:blue;
+			height:240px;
+			width:240px;
+			margin-bottom:20px;<!--未脱离文档流-->
+		}
+		.box3{
+		    background-color:green;
+			height:120px;
+			width:120px;
+			position:absolute;<!-- 脱离文档流-->
+		}
+		.box4{
+		    background-color:pink;
+			height:240px;
+			width:240px;
+			position:absolute;<!-- 脱离文档流-->
+		}
+	</style>
+</head>
+<body>
+    <div class="box1">box1红色</div>
+	<div class="box2">box2蓝色</div>
+	<div class="box3">box3绿色</div>
+	<div class="box4">box4粉色</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	
+</head>
+<body>
+	
+	<script type="text/javascript">
+		function myFunction(){
+			var div;
+			div = document.getElementsByTagName("div")[0];
+			var color = div.style.backgroundColor;
+			if (color == 'green')
+				{
+					color = 'red';	
+					alert("green");
+				}
+			else
+				{
+					color = 'green';
+					alert("red");
+				}
+			// div.style.backgroundColor = color;
+		}
+	</script>
+	<div style="background-color:green;width:100px;height:100px;border:1px solid black;" onclick= "myFunction()"></div>
+</body>
+</html>

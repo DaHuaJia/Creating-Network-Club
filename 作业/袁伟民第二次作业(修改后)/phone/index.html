@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		body{
+			background:#e0e0e0;
+		}
+		#phone{
+			margin:0 auto;
+			width:303px;
+			position:relative;
+		}
+		#content{
+			width:272px;
+			height:480px;
+			background:black;
+			position:absolute;
+			top:78px;
+			left:17px;
+		}
+		#top{
+			width:270px;
+			height:20px;
+			-moz-user-select:none;
+			background:yellow;
+		}
+		#center{
+			width:270px;
+			height:420px;
+			background:#333;
+			float:left;
+			overflow-y:auto;
+		}
+		#bottom{
+			width:270px;
+			height:40px;
+			background:#151302;
+			float:left;
+		}
+		#face{
+			width:30px;
+			height:30px;
+			float:left;
+			margin:5px;
+			background:#151302;
+			-moz-user-select:none;
+		}
+		#face img{
+			width:30px;
+			height:30px;
+		}
+		#text{
+			width:176px;
+			height:30px;
+			color:#ccc;
+			margin-top:5px;
+			text-indent:1em;
+			background:#514f4f;
+			border:none;
+			border-radius:5px;
+		}
+		#send{
+			font-size:13px;
+			float:right;
+			width:40px;
+			height:30px;
+			color:white;
+			background:#151302;
+			text-align:center;
+			cursor:pointer;
+			line-height:30px;
+			margin:5px;
+			-moz-user-select:none;
+		}
+		.left{
+			padding-left:40px;
+			background:#333 url('face1.png') no-repeat left 8px;/*优先级问题*/
+			float:left;
+			clear:both;
+		}
+		.right{
+			float:right;
+			padding-right:40px;
+			background:#333 url('face1.png') no-repeat right 8px;
+			clear:both;
+		}
+	    span{
+			margin-top:10px;
+			display:block;
+			word-wrap:break-word;/*超出部分换行*/
+			overflow:hidden;
+			max-width:180px;
+			line-height:40px;
+			border-radius:5px;
+			color:#ccc;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		
+			var center = document.getElementById('center');
+			oSend = document.getElementById('send');
+			oFace = document.getElementById('face');
+			oImg = oFace.getElementsByTagName('img')[0];
+			oTxt = document.getElementById('text');
+			oSpan = document.getElementsByTagName('span');
+			var num = 1;
+			var times = 1;
+
+
+		    oFace.onclick = function(){
+				if(num < 3)
+					num++;
+				else 
+					num = 1;
+				oImg.src = 'face' + num + '.png';
+				times ++;
+				return times;
+			};
+			oSend.onmousedown = function(){
+				oSend.style.color = '#ccc';
+			};
+			oSend.onmouseup = function(){
+				oSend.style.color = '#fff';
+			};
+			oSend.onclick = function(){
+				var span = document.createElement('span');
+				center.appendChild(span);
+				oSpan[oSpan.length - 2].style.backgroundImage = "url('" + oImg.src + "')";
+				oSpan[oSpan.length - 2].innerHTML = oTxt.value;
+				oTxt.value = '';
+				if(times % 2 == 1)
+						oSpan[oSpan.length - 2].className = 'left';
+				else 
+						oSpan[oSpan.length - 2].className = 'right';
+			};
+			document.onkeydown=function(evt){ //添加键盘enter事件
+				evt = window.event || evt;
+    			if(evt.keyCode==13)
+    			{
+              	var span = document.createElement('span');
+				center.appendChild(span);
+				oSpan[oSpan.length - 2].style.backgroundImage = "url('" + oImg.src + "')";
+				oSpan[oSpan.length - 2].innerHTML = oTxt.value;
+				oTxt.value = '';
+				if(times % 2 == 1)
+						oSpan[oSpan.length - 2].className = 'left';
+				else 
+						oSpan[oSpan.length - 2].className = 'right';
+				}
+				else if(evt.keyCode==9)
+    			{
+              		if(num < 3)
+						num++;
+					else 
+						num = 1;
+					oImg.src = 'face' + num + '.png';
+					times ++;
+					return times;
+				}
+         	};
+		};
+	</script>
+</head>
+<body>
+	<div id="phone">
+		<img src="iphone.jpg">
+		<div id="content">
+			<div id="top"><img src="top.jpg"></div>
+			<div id="center">
+				<span class="left"></span>
+			</div>
+			<div id="bottom">
+				<div id="face"><img src="face1.png"></div>
+				<input type="text" id="text" value=''>
+				<div id="send">发送</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>轮播图</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		#div1{
+			width:400px;
+			height:400px;
+			border:8px solid #ccc;
+			position:relative;
+			top:100px;
+			left:400px;
+		}
+		.div1{
+			background-image:url( 1.jpg );
+		}
+		.div2{
+			background-image:url( 2.jpg );
+		}
+		.div3{
+			background-image:url( 3.jpg );
+		}
+		.div4{
+			background-image:url( 4.jpg );
+		}
+		#prev{
+			position:relative;
+			top:200px;
+			margin-left:4px;
+		}
+		#next{
+			position:relative;
+			top:200px;
+			margin-left:340px;
+		}
+		#span1{
+			position:relative;
+			top:110px;
+			left:590px;
+		}
+		#span2{
+			position:relative;
+			top:90px;
+			left:580px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		var i = 1;
+		var button1 = document.getElementById('prev');
+		var button2 = document.getElementById('next');
+			button2.onclick = function(){
+				i ++;
+				switch(i){
+					case 1: div1.className = 'div1';span2.innerHTML = '校园风景';span1.innerHTML = '第一张';break;
+					case 2: div1.className = 'div2';span2.innerHTML = '绿树春光';span1.innerHTML = '第二张';break;
+					case 3: div1.className = 'div3';span2.innerHTML = '大雁南飞';span1.innerHTML = '第三张';break;
+					case 4: div1.className = 'div4';span2.innerHTML = '应科微电台';span1.innerHTML = '第四张';i = 0;break;
+					default:break;
+				};
+			};
+			button1.onclick = function(){
+				switch(i){
+					case 1: div1.className = 'div1';span2.innerHTML = '校园风景';span1.innerHTML = '第一张';i = 5;break;
+					case 2: div1.className = 'div2';span2.innerHTML = '绿树春光';span1.innerHTML = '第二张';break;
+					case 3: div1.className = 'div3';span2.innerHTML = '大雁南飞';span1.innerHTML = '第三张';break;
+					case 4: div1.className = 'div4';span2.innerHTML = '应科微电台';span1.innerHTML = '第四张';break;
+					default:break;
+				};
+				i --;
+			};
+		};
+	</script>
+</head>
+<body>
+	<span id="span2">校园风光</span>
+	<div id="div1" class="div1" >
+		<input id="prev" type="button" value=" < "/>
+		<input id="next" type="button" value=" > "/>
+	</div>
+	<span id="span1">第一张</span>
+</body>
+</html>

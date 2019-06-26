@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style type="text/css" media="screen">
+		*{
+			padding:0;
+			margin:0;
+			border:none;
+			list-style:none;
+			text-decoration:none;
+		}
+		#top{
+			display:relative;
+			margin:60px auto;
+			margin-bottom:0;
+			width:460px;
+			height:60px;
+			background:blue;
+			color:#fff;
+			text-align:center;
+			line-height:60px;
+			border:none;
+			cursor:pointer;
+		}
+		#box{
+			width:460px;
+			height:460px;
+			background:#bbaeae;
+			border:none;
+			margin:0 auto;
+			position:relative;
+		}
+		#box div{
+			width:70px;
+			height:70px;
+			border-radius:5px;
+			background:white;
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-left:-35px;
+			margin-top:-35px;
+			line-height:70px;
+			text-align:center;
+		}
+		#change{
+			width:200px;
+			background:gray;
+			position:absolute;
+			padding:5px 10px;
+			left:913px;
+			top:60px;
+			cursor:pointer;
+		}
+		#cover{
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0;
+			opacity:0.7;
+			background:black;
+			display:none;
+		}
+		span{
+			font-weight:bold;
+			display:block;
+		}
+		#change > li{
+			width:190px;
+			padding:5px;
+			margin-top:10px;
+		}
+		#change > li > ul > li{
+			width:30px;
+			height:30px;
+			background:#fff9f9;
+			border-radius:5px;
+			line-height:30px;
+			text-align:center;
+			display:inline-block;
+			border:1px solid black;
+			margin-left:20px;
+		}
+		#change > li > ul > li:hover{
+			background:#1aa;
+		}
+		button{
+			width:60px;
+			height:30px;
+			border-radius:3px;
+			border:1px solid black;
+			color:white;
+			background:black;
+			position:relative;
+		}
+		#btn1{
+			left:30px;
+		}
+		#btn2{
+			right:-30px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function (){
+			var oBtn1 = document.getElementById('btn1');
+			var oBtn2 = document.getElementById('btn2');
+			var top = document.getElementById('top');
+			var change = document.getElementById('change');
+			var box = document.getElementById('content');
+			var red = document.getElementById('red');
+			var cover = document.getElementById('cover');
+			var wid = document.getElementById('width');
+			var yellow = document.getElementById('yellow');
+			var blue = document.getElementById('blue');
+			var wid1 = document.getElementById('width_100');
+			var wid2 = document.getElementById('width_200');
+			var wid3 = document.getElementById('width_300');
+			var hei1 = document.getElementById('height_100');
+			var hei2 = document.getElementById('height_200');
+			var hei3 = document.getElementById('height_300');
+
+
+			hei1.onclick = function (){
+				box.style.height = '100px';
+				box.style.marginTop = '-50px';
+				box.style.lineHeight = '100px';
+			}
+			hei2.onclick = function (){
+				box.style.height = '200px';
+				box.style.marginTop = '-100px';
+				box.style.lineHeight = '200px';
+			}
+			hei3.onclick = function (){
+				box.style.height = '300px';
+				box.style.marginTop = '-150px';
+				box.style.lineHeight = '300px';
+			}
+			wid1.onclick = function (){
+				box.style.width = '100px';
+				box.style.marginLeft = '-50px';
+			}
+			wid2.onclick = function (){
+				box.style.width = '200px';
+				box.style.marginLeft = '-100px';
+			}
+			wid3.onclick = function (){
+				box.style.width = '300px';
+				box.style.marginLeft = '-150px';
+			}
+			
+
+			top.onclick = function (){
+				cover.style.display = 'block';
+			};
+
+			//样式初始化
+			oBtn1.onclick = function (){
+				box.style.backgroundColor = 'white';
+				box.style.width = '70px';
+				box.style.height = '70px';
+				box.style.marginLeft = '-35px';
+				box.style.marginTop = '-35px';
+				box.style.lineHeight = '70px';
+			};
+
+			red.onclick = function (){
+				box.style.backgroundColor = red.id;
+			};
+			yellow.onclick = function (){
+				box.style.backgroundColor = yellow.id;
+			};
+			blue.onclick = function (){
+				box.style.backgroundColor = blue.id;
+			};
+			oBtn2.onclick = function (){
+				cover.style.display = 'none';
+			}
+		};
+	</script>
+</head>
+<body>
+	<div id="top">点此设置样式</div>
+	<div id="box">
+		<div id="content">智障</div>
+	</div>
+	<div id="cover">
+		<ul id="change">
+			<li><span>选择背景</span>
+				<ul>
+					<li style="background:red;" id="red">红</li>
+					<li style="background:yellow;" id="yellow">黄</li>
+					<li style="background:blue;" id="blue">蓝</li>
+				</ul>
+			</li>
+			<li>
+				<ul><span>选择宽度</span>
+					<li id="width_100">100</li>
+					<li id="width_200">200</li>
+					<li id="width_300">300</li>
+				</ul>
+			</li>
+			<li>
+				<ul><span>选择高度</span>
+					<li id="height_100">100</li>
+					<li id="height_200">200</li>
+					<li id="height_300">300</li>
+				</ul>
+			</li>
+			<button id="btn1">恢复</button>
+			<button id="btn2">确定</button>
+		</ul>
+	</div>
+</body>
+</html>

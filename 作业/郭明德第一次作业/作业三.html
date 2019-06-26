@@ -1,0 +1,136 @@
+<!DOCUYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>试调</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			position:absolution;
+			height:800px;
+			width:780px;
+		}
+		#button1,#button2,#button3{
+			height:30px;
+			width:100px;
+			font-size:18px;
+			margin-top:10px;
+			margin-right:38px;
+			float:left;
+		}
+		#div1{
+			display:none;
+			height:300px;
+			width:300px;
+			border:1px #000 solid;
+			padding:20px;
+			position:relative;
+			top:4px;
+			left:300px;
+			float:right;
+		}
+		li{
+			border:2px solid #000;
+			width:50px;
+			height:50px;
+			float:right;
+			list-style:none;
+			margin-right:2px;
+			text-align:center;
+			line-height:50px;
+		}
+		ul{
+			height:80px;
+			width:300px;
+			float:left;
+		}
+		#div{
+			height:100px;
+			width:100px;
+			background-color:#c0ff3e;
+			margin:20px 0 0 20px;
+			float:left;
+		}
+		.box{
+			height:420px;
+			width:420px;
+		}
+	</style>
+	<script>
+	window.onload = function (){ //用一个函数使它在网页加载完成之后执行script。
+		document.getElementById('button1').onclick = function(){
+			document.getElementById('div1').style.display='block';
+		} //点击设置后的样式
+		document.getElementById('button3').onclick = function(){
+			document.getElementById('div1').style.display='none';
+		} //点击确定后的样式
+		document.getElementById('button2').onclick = function(){
+			document.getElementById('div').style.backgroundColor='#c0ff3e';
+			document.getElementById('div').style.height='100px';
+			document.getElementById('div').style.width='100px';
+		} //点击恢复后的样式
+		document.getElementById('color1').onclick = function(){
+			document.getElementById('div').style.backgroundColor='red';
+		} //设置div为红色
+		document.getElementById('color2').onclick = function(){
+			document.getElementById('div').style.backgroundColor='yellow';
+		} //设置div为黄色
+		document.getElementById('color3').onclick = function(){
+			document.getElementById('div').style.backgroundColor='blue';
+		} //设置div为蓝色
+		document.getElementById('width1').onclick = function(){
+			document.getElementById('div').style.width='200px';
+		} //设置div宽度为200px
+		document.getElementById('width2').onclick = function(){
+			document.getElementById('div').style.width='300px';
+		} //设置div宽度为300px
+		document.getElementById('width3').onclick = function(){
+			document.getElementById('div').style.width='400px';
+		} //设置div宽度为400px
+		document.getElementById('height1').onclick = function(){
+			document.getElementById('div').style.height='200px';
+		} //设置div高度为200px
+		document.getElementById('height2').onclick = function(){
+			document.getElementById('div').style.height='300px';
+		} //设置div高度为300px
+		document.getElementById('height3').onclick = function(){
+			document.getElementById('div').style.height='400px';
+		} //设置div高度为400px
+	}
+	</script>
+</head>
+<body id="body">
+	<span style="margin:20px;font-size:22px;float:left;">点击按钮设置div样式：</span>
+	<input id="button1" type="button" value="点击设置" />
+	<div id="div1">
+		<ul>
+		<span style="margin:10px;">选择背景颜色：</span>
+			<li id="color1" style="background-color:red;">红</li>
+			<li id="color2" style="background-color:yellow;">黄</li>
+			<li id="color3" style="background-color:blue;">蓝</li>
+		</ul>
+		
+		<ul>
+		<span style="margin:10px;">选择宽度：</span>
+			<li id="width1">200px</li>
+			<li id="width2">300px</li>
+			<li id="width3">400px</li>
+		</ul>
+		
+		<ul>
+		<span style="margin:10px;">选择高度：</span>
+			<li id="height1">200px</li>
+			<li id="height2">300px</li>
+			<li id="height3">400px</li>
+		</ul>
+		<input id="button2" type="button" value="恢复" />
+		<input id="button3" type="button" value="确定" />
+	</div>
+	<div class="box">
+		<div id="div"></div>  <!--这是试调用的div-->
+	</div> 
+</body>
+</html>

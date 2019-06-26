@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>样式优先级</title>
+    <style>
+        div{
+			margin-top:20px;
+			background-color:rgb(0,255,0);
+		}
+		span{
+		    background-color:blue;
+			font-size:50px;
+			height:50px;
+		}
+		.bg1{
+		    height:50px;
+		    background-color:pink;
+		}
+		.bg2{
+		    background-color:green;
+			height:50px;
+		}
+		#box1{
+		    background-color:yellow;
+			height:50px;
+		}
+		.bg3{
+		    background-color:rgb(100,200,220);
+			height:50px;
+		}
+		#box2{
+		    background-color:red;
+		}
+		<!--优先级-->
+		.bg6{
+		    background-color:green;
+		}
+		#box6{
+		    background-color:red;
+		}<!--优先级-->
+    </style>
+</head>
+<body>
+<!--同级样式后者覆盖前者。-->
+<!--类型选择符div(1)< class(10)< id(100)< 行间样式style。-->
+    <div id="box">
+        <div class="bg1">div1</div>
+	    
+		<div class="bg1 bg2">div2</div>
+		
+		<div id="box1">div3</div>
+		
+		<div class="bg3">
+		    <div id="box2">rgb(100,200,220)</div>
+		</div>
+		<span> span4</span>
+    </div>
+    <p style="background-color:rgb(100,200,220);"> 颜色rgb(100,200,220)</p>
+	<div class="bg6" id="box6" style="background-color:blue;">优先级 class="bg6" id="box6" style="background-color:blue;"</div>
+</body>
+</html>

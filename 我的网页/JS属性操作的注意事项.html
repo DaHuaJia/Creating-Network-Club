@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>聊天记录</title>
+	<style type="text/css">
+		.dome1{
+			background-color:#99ff33;
+			border:10px solid #ccc;
+			width:360px;
+		}
+		.dome2{
+			background-color:#ff6633;
+			border:15px solid #ccc;
+			width:460px;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oP = document.getElementById('p1');
+		var oBtn1 = document.getElementById('button1');
+		var oBtn2 = document.getElementById('button2');
+		var oBtn3 = document.getElementById('button3');
+		var oBtn4 = document.getElementById('button4');
+		var num = 16;
+		oBtn1.onclick = function(){
+			num ++;
+			oP.style.fontSize = num + 'px';
+		};
+		oBtn2.onclick = function(){
+			num --;
+			oP.style.fontSize = num + 'px';
+		};
+		oBtn3.onclick = function(){
+			oP.className = 'dome1';
+		};
+		oBtn4.onclick = function(){
+			oP.className = 'dome2';
+		};
+	};
+	</script>
+</head>
+<body>
+	<input id="button1" type="button" value="+" />
+	<input id="button2" type="button" value="-" />
+	<input id="button3" type="button" value="模式一" />
+	<input id="button4" type="button" value="模式二" />
+	<br/>
+	<p id="p1" >&nbsp &nbsp &nbsp 参考消息网5月9日报道 日媒称，日本气象厅表示，7日观测到沙尘暴来袭，范围覆盖从日本西部到北部的广大地区，还包括关东地区的部分地区。
+共同社5月7日报道称，日本气象厅表示，从中国吹来的大风携带着黄沙，持续到8日，主要是在日本西部。气象厅警告，由于能见度低，可能会对运输造成干扰。
+日本气象厅说，在熊本市，7日凌晨3点到6点的能见度已经下降到8公里。能见度下降到不到10公里时，从远处就能清楚地看到雾霾。
+7日，在北海道、东北部、中部、关西地区和九州，都能观测到携带沙尘的空气。在群马县和茨城县也看到了沙尘空气。
+6日在日本西部观测到的扬沙是今年来的首次。这是自1967年日本有沙尘记录以来最新检测到的扬沙天气。
+	</p>
+	
+</body>
+</html>

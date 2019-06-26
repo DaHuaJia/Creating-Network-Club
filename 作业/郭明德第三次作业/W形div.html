@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title>W形</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+		}
+	    div {
+			height:50px;
+			width:50px;
+			position:absolute;
+			color:white;
+			background:#66ff66;
+			line-height:50px;
+			text-align:center;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var i;
+		var oBtn = document.getElementById('button1');
+		var oDiv = document.getElementsByTagName('div');
+		oBtn.onclick = function(){
+			for ( i = 0; i <= 20; i++) {
+				document.body.innerHTML += '<div>' + i + '</div>';
+				if(i <= 5){
+					oDiv[i].style.marginLeft = i * 50 + 'px';
+					oDiv[i].style.marginTop = i * 50 + 'px';
+					oDiv[i].style.background = '#' + i * 107589 ;
+				}else if(i <= 10){
+					oDiv[i].style.marginLeft = i * 50 + 'px';
+					oDiv[i].style.marginTop = (10 - i) * 50 + 'px';
+					oDiv[i].style.background = '#' + i * 108734 ;
+				}else if(i <= 15){
+					oDiv[i].style.marginLeft = i * 50 + 'px';
+					oDiv[i].style.marginTop = (i - 10) * 50 + 'px';
+					oDiv[i].style.background = '#' + i * 10134 ;
+				}else {
+					oDiv[i].style.marginLeft = i * 50 + 'px';
+					oDiv[i].style.marginTop = (20 - i) * 50 + 'px';
+					oDiv[i].style.background = '#' + i * 12134 ;
+				}
+			}
+		};
+	};
+
+	</script>
+</head>
+<body>
+	<input id="button1" type="button" value="生成div" />
+</body>
+</html>

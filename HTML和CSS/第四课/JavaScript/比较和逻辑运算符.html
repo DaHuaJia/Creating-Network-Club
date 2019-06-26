@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>比较和逻辑运算符</title>
+	<script>
+		// 这是布尔类型的值，只有两个true 和 false;
+		var flag = true;
+		var flag2 = false;
+		
+		var a = 5;
+		
+		if(false){
+			console.log("a 小于 3");
+		}else{
+			console.log("a 不小于 3");
+		}
+		
+		
+		if(1){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// 数字 0 在if 中等价于 false
+		if(0){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// 非0 在if 中等价于 true
+		if(-1){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		
+		// 字符串
+		if("aaa"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if("111"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if(""){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if(" "){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// 只要不是空字符 "" 就是true 其他都是false
+		
+		
+		if("5" == 5){ 
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// 以上代码等价于
+		if(5 == 5){ 
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if(123 == "100"){ 
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if(123 > "100"){ 
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if(1 < "100"){ 
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		// 总结：if中出现数字 和 带有数字的字符串的比较 会把字符串转化为 数字 然后在进行比较
+		
+		
+		// ===
+		if(5 === "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if(5 === 5){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		if("123" === "123"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// !=
+		if(5 != "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// !==
+		if(5 !== "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		
+		// >=
+		if(10 >= 5){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// >=
+		if(10 >= "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+		// <=
+		if(10 <= "5"){
+			console.log("true");
+		}else{
+			console.log("false");
+		}
+		
+	/*
+		if(condition){
+			// ture
+		}
+		
+		
+		if(condition){
+			// ture
+		}else{
+			// false
+		}
+	
+		if(condition)
+	*/	
+		var a = 3;
+		if(a == 3)
+			a = 5;
+		else
+			a = 2;
+		
+		console.log(a);
+		
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

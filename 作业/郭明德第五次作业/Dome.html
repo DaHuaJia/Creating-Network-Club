@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>系统时间</title>
+	<style type="text/css">
+    
+    </style>
+    <script type="text/javascript">
+    	window.onload = function(){
+			fnTime();
+			setInterval(fnTime,1000);
+			function fnTime(){
+				var myTime = new Date();
+				var myH = myTime.getHours();
+				var myM = myTime.getMinutes();
+				var myS = myTime.getSeconds();
+				var Str;
+				var oDiv = document.getElementById("div");
+				var oImg = document.getElementsByTagName("img");
+				Str = funTime(myH) + ":" + funTime(myM) + ":" + funTime(myS);
+				oDiv.innerHTML = Str;
+				for(var i=0; i<8; i++){
+					if(i==2 || i==5) continue;
+					oImg[i].src="img/"+Str.charAt(i)+".jpg";
+				}
+			}
+			function funTime(num){
+				if(num<10) return '0'+num;
+				else return num;
+			}
+		}
+    </script>
+</head>
+
+<body>
+	<div id="div" style="font-size:64px"></div>
+    <img src="img/0.jpg"/>
+    <img src="img/0.jpg"/>
+    <img src="img/colon.jpg"/>
+    <img src="img/0.jpg"/>
+    <img src="img/0.jpg"/>
+    <img src="img/colon.jpg"/>
+    <img src="img/0.jpg"/>
+    <img src="img/0.jpg"/>
+</body>
+</html>

@@ -1,0 +1,266 @@
+body,div,address,blockquote,iframe,ul,ol,dl,dt,dd,li,dl,h1,h2,h3,h4,h5,h6,p,pre,table,  
+caption,th,td,form,legend,fieldset,input,button,select,textarea{margin:0;padding:0;  
+font-weight:normal;font-style:normal;font-size:100%;font-family:inherit;}  
+ol,ul,li{list-style:none;}  
+img{border:0;}  
+body{color:#000;background:#FFF;font:12px/1.5Arial,Helvetica,sans-serif;}  
+
+ 
+.clear{clear:both;content:'';display: block;}  
+.clear:after{clear:both;content:'';display: block;}
+.dis{display:block;}  
+.undis{display:none;}
+a{
+	text-decoration: none;
+	color: #000;
+}
+/*此上面代码是初始CSS模板，下面是新写CSS布局框架代码*/
+#header, #mainMenu, #search, #banner, #mainBody, #footer{
+	width: 976px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+
+.logo-title{
+	height: 76px;
+	line-height: 76px;
+	float: left;
+}
+.logo{
+	vertical-align:middle;
+}
+.title{
+	vertical-align:middle;
+}
+.link{
+	float: right;
+	line-height: 76px;
+	background:  url(../image/sj.png) no-repeat left center;
+	padding-left:5px;
+}
+.link a{
+	color:#000;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#mainMenu{
+	border-top:5px solid #FF0000;
+	padding: 5px 0;
+	background-color: #fdfdfd;
+}
+.mainMenu-inner{
+	font-size: 0;
+}
+.mainMenu-inner li{
+	display: inline-block;
+}
+.mainMenu-inner a{
+	display: inline-block;
+	font-size: 12px;
+	padding: 5px 15px;
+	background: url(../image/sj.png) no-repeat 5px center; 
+}
+.mainMenu-inner .active{
+	background: #f00;
+	
+}
+
+#search{
+	border-top:1px solid #ccc;
+}
+
+.welcome{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	color:#6e6e6e;
+	font-size: 12px;
+}
+
+.form-search{
+	float: right;
+	margin-top: 7px;
+}
+.key-search{
+	float: left;
+	padding-left: 25px;
+	background: url(../image/search.png) no-repeat  6px center;
+	border:1px solid #ccc;
+	margin-right: 20px;
+} 
+.key-search input{
+	height: 24px;
+	outline: none;
+	border:none;
+	
+}
+
+.search-button{
+	float: right;
+	height: 22px;
+	line-height: 22px;
+	margin-top:3px;
+	width: 60px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #f00;
+	border: none;
+}
+
+
+#banner{
+	width: 976px;
+	height: 314px;
+}
+.banner-image li{
+	background: url(../image/banner.jpg) no-repeat left top;
+	width: 976px;
+	height: 314px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.banner-button{
+	position: absolute;
+	bottom: 8px;
+	right: 12px;
+	
+}
+.banner-button li{
+	width: 15px;
+	height: 15px;
+	float: left;
+	background-color: #fff;
+	margin-right: 5px;
+}
+
+.banner-button .banner-active{
+	background-color: #f00;
+}
+
+.mainBody-left{
+	float: left;
+	width: 334px;
+	border:1px solid #d8d8d8;
+	border-top: 3px solid #797979;
+	margin-top: 9px;
+}
+
+.title-box {
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 1px solid #ccc;
+	background-color: #fafafa;
+}
+
+.title-box-left{
+	float: left;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.title-box-right{
+	float: right;
+	padding-right: 12px;
+	font-size: 12px;
+}
+
+.content-box {
+	height: 126px;
+	padding: 20px 15px;
+}	
+.info li{
+	padding-left: 12px;
+	font-size: 13px;
+	background: url(../image/dsj.png) no-repeat left center;
+	line-height: 18px;
+}
+.content-box li span{
+	float: right;
+}
+
+.mainBody-center{
+	float: left;
+	width: 407px;
+	border:1px solid #d8d8d8;
+	border-top: 3px solid #797979;
+	margin-top: 9px;
+	margin-left: 10px;
+}
+.school {
+	font-size: 0;
+}
+
+.school li{
+	display: inline-block;
+	margin-left: 9px;
+	font-size: 15px;
+	text-align: center;
+}
+.school img {
+	display: block;
+}.school a {
+	line-height: 40px;
+	font-size: 13px;
+}
+
+.mainBody-right{
+	width: 212px;
+	border-top: 3px solid #797979;
+	float: left;
+	margin-top: 9px;
+	margin-left: 8px;
+}
+
+.cooperate{
+	text-align: center;
+	padding: 2px 0;
+	border-left: 1px solid #797979;
+	border-bottom: 1px solid #797979;
+	border-right: 1px solid #797979
+}
+.cooperate img{
+	width: 208px;
+	vertical-align: top;
+	
+}
+.address-info {
+	border: 1px solid #d8d8d8;
+	margin-top: 8px;
+	padding: 5px 5px;
+	height: 126px;
+}
+
+.relation {
+	height: 25px;
+	line-height: 25px;
+	text-indent: 1em;
+	border: 1px solid #000;
+	font-size: 12px;
+	background-color: #fafafa;;
+	font-weight: bold;
+}
+.address-info p{
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+#footer{
+	margin-top: 10px;
+}
+.copyright{
+	height: 27px;
+	line-height: 27px;
+	text-indent: 1em;	
+	color: #000;
+	background-color: #f00;
+	font-size: 12px;
+}
+.copyright span{
+	float: right;
+}

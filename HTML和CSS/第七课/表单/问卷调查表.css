@@ -1,0 +1,21 @@
+
+body{
+    background-color:pink;
+}
+h1{
+    font-size:kaiti;
+    text-align:center;
+}
+.form{
+    padding:5px;
+    margin:0 auto;
+}
+div{
+    padding:0 auto;
+}
+.button{
+    background-color:rgba(0,0,0,0);
+    list-style:none;
+    border:none;
+    margin-top:16px;
+}

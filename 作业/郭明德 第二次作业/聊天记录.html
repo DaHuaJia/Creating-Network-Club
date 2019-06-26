@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>聊天记录</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+			list-style:none;
+		}
+		#phone{
+			background-image:url( iphone.jpg );
+			width:304px;
+			height:640px;
+			margin:0 auto;
+			position:relative;
+		}
+		#index{
+			background:#C0FF3E;
+			width:276px;
+			height:480px;
+			position:absolute;
+			left:15px;
+			top:78px;
+		}
+		#top{
+			width:276px;
+			height:20px;
+		}
+		#spandiv{
+			height:430px;
+			width:276px;
+		}
+		#span1{
+			height:30px;
+			word-wrap:break-word;
+			overflow:hidden;
+			display:block;
+			margin-left:6px;
+			font-size:20px;
+			line-height:30px;
+			float:left;
+		}
+		#center1{
+			width:26px;
+			height:30px;
+			float:left;
+		}
+		#center3{
+			width:26px;
+			height:30px;
+			float:right;
+		}
+		#buttom{
+			background:#ccc;
+			width:276px;
+			height:30px;
+			position:absolute;
+			top:450px;
+		}
+		#face{
+			width:26px;
+			height:26px;
+			float:left;
+			margin-left:4px;
+			cursor:pointer;   
+		}
+		#text1{
+			height:26px;
+			width:174px;
+			margin-left:6px;
+		}
+		#button1{
+			width:50px;
+			height:28px;
+			font-size:17px;
+			cursor:pointer; 
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oSpan = document.getElementById('span1');
+			var oFace = document.getElementById('face');
+			var oText = document.getElementById('text1');
+			var oBtn = document.getElementById('button1');
+			var oImg = document.getElementById('img');
+			var oCenter = document.getElementById('center1');
+			var oCenter2 = document.getElementById('center2');
+			
+			var i = 1;
+			oFace.onclick = function(){
+				i ++;
+				switch(i){
+					case 1:oImg.src = 'face1.png';break;
+					case 2:oImg.src = 'face2.png';break;
+					case 3:oImg.src = 'face3.png';i = 0;break;
+				}
+			};
+			oBtn.onclick = function(){
+				oCenter2.src = oImg.src ;
+				if( i == 0 )oCenter.id = 'center3';
+				oSpan.innerHTML = oText.value + '<br/>';
+				oText.value = '';
+				var span = document.createElement('span');
+				spandiv.appendChild( span );
+				span.innerHTML = '我不会了!<br/>';
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="phone">
+		<div id="index">
+			<img id="top" src="top.jpg" style="height:100%,width:100%" />
+			<div id="center1"><img id="center2" src="" /></div>
+				<div id="spandiv"><span id="span1"></span></div>
+			<div id="buttom">
+				<div id="face">
+					<img id="img" src="face1.png" style="width:100%;height:100%;"/>
+				</div>
+				<input id="text1" type="text" />
+				<input id="button1" type="button" value="发送" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

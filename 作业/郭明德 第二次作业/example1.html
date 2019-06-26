@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>轮播图</title>
+	<style>
+    	*{list-style:none;}
+		#textup,#textdown{margin:20px 20px 20px 600px;text-align:center;padding:20px;}
+		#oBtn1,#oBtn2{padding:2px 2px; cursor:pointer; font-size:20px; font-weight:bold;margin-top:170px;}
+		#div1{border:solid #ccc 2px; height:360px; width:360px; margin:10px auto 10px 470px; background-image:url(1.jpg);background-size:cover;}
+    </style>
+    <script type="text/javascript" >
+    	window.onload = function(){
+				var oDiv = document.getElementById('div1');
+				var oBtn1 = document.getElementById('oBtn1');
+				var oBtn2 = document.getElementById('oBtn2');
+				var oTxtUp = document.getElementById('textup');
+				var oTxtDown = document.getElementById('textdown');
+				var i = 1;
+				oBtn1.onclick = function(){
+					i++;
+					getBG();
+				};
+				oBtn2.onclick = function(){
+					i--;
+					getBG();
+				};
+				function getBG(){
+					if(i==0) i=4;
+					if(i==5) i=0;
+					oDiv.style.background = 'url('+i+'.jpg)';
+					switch(i){
+						case 1: oTxtUp.innerHTML = '校园风景';oTxtDown.innerHTML = '第一张';break;
+						case 2: oTxtUp.innerHTML = '绿树春光';oTxtDown.innerHTML = '第二张';break;
+						case 3: oTxtUp.innerHTML = '大雁南飞';oTxtDown.innerHTML = '第三张';break;
+						case 4: oTxtUp.innerHTML = '应科微电台';oTxtDown.innerHTML = '第四张';break;
+						default:break;
+					};
+				};
+		};
+    </script>
+</head>
+<body>
+	<span id="textup">绿树春光</span>
+    <div id="div1">
+    	<input id="oBtn1" type="button" value=" < " style="margin-left:4px;float:left; " />
+        <input id="oBtn2" type="button" value=" > " style="margin-right:4px; float:right; " />
+    </div>
+    <span id="textdown" style="margin-left:610px;">第一张</span>
+</body>
+</html>

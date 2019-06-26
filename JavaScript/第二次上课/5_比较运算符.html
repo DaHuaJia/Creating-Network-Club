@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>比较运算符</title>
+	<script>
+		// 定义布尔类型的变量, 布尔类型只有 true 和 false 类似 1 和 0
+		var flag1 = true;
+		var flag1 = false;
+
+		// if语句
+		if(flag1){
+			console.log("这里面是true的代码");
+		} else{
+			console.log("这里面是false的代码");
+		}
+
+		// 特殊判断: 
+		if(0){
+			console.log("非零数值代表是真");
+		} else{
+			console.log("0数值代表是false");
+		}
+
+		// 特殊判断: 
+		if(1){
+			console.log("非零数值代表是真");
+		} else{
+			console.log("0数值代表是false");
+		}
+
+		// 特殊判断: 
+		if(""){
+			console.log("非空字符串代表是真");
+		} else{
+			console.log("空字符串代表是假");
+		}
+
+		// 特殊判断: 
+		if("0"){
+			console.log("非空字符串代表是真");
+		} else{
+			console.log("空字符串代表是假");
+		}
+
+
+
+		var a = 5;
+		// == 等于 比较运算符  
+		if(a == 5){
+			console.log("a等于5");
+		} else{
+			console.log("a不等于5");
+		}
+
+		// 字符串比较是否相等
+		var s1 = "abc";
+		if(s1 == "abc"){
+			console.log("s1等于abc");
+		}else{
+			console.log("s1不等于abc");
+		}
+
+		// 字符串和数值类型比较
+		var n = 5;
+		var s2 = "5";
+		if(n == s2){
+			console.log("5 等于 '5' ");
+		}else{
+			console.log("5 不等于 '5' ");
+		}
+
+		// 	=== 绝对等于（值和类型均相等）
+		var n2 = 5;
+		var s3 = "5";
+		if(n === s2){
+			console.log("5 绝对等于 '5' ");
+		}else{
+			console.log("5 绝对不等于 '5' ");
+		}
+
+		// != 不等于
+		var a2 = 5;
+		if(a2 != 2){
+			console.log("a2 不等于 2");
+		}else{
+			console.log("a2 等于 2");
+		}
+
+		var a3 = 5;
+		if(a3 != "5" ){
+			console.log("a3 不等于 '5' ");
+		}else{
+			console.log("a3 等于 '2' ");
+		}
+
+		// !== 不等于 绝对不等于（值或类型不相等）
+		var a4 = 5;
+		if(a4 !== "5" ){
+			console.log("a4 绝对不等于 '5' ");
+		}else{
+			console.log("a4 绝对等于 '2' ");
+		}
+
+		// >  大于
+		if(5 > 3){
+			console.log("5 大于 3");
+		}
+
+		// < 小于
+		if(3 < 10){
+			console.log("3 小于 10");
+		}
+
+		// >= 大于或等于
+		if(5 >= 5){
+			console.log("5  大于等于 5");
+		}
+
+		// <= 小于或等于
+		if(5 <= 5){
+			console.log("5 小于等于 5");
+		}
+
+		// 字符串比较大小  // 比较的是unicode字符集中的字符顺序
+		var str1 = "abc";
+		var str2 = "b";
+		if(str1 > str2){
+			console.log("str1 大于 str2");
+		}else{
+			console.log("str1 小于 str2");
+		}
+
+		// 字符串和数值的比较
+		var num1 = 300; 	
+		var str = "200a";	
+		if(num1 > str){	// 会自动把字符串转化为数值然后进行比较
+			console.log("num1 大于 str");
+		}else{
+			console.log("num1 小于 str");
+		}
+
+
+
+		// >= <= 
+		var n = 10
+		if(n >= 11){
+			console.log("n 大于等于 11");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

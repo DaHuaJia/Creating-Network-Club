@@ -1,0 +1,58 @@
+	body,div,address,blockquote,iframe,ul,ol,dl,dt,dd,li,dl,h1,h2,h3,h4,h5,h6,p,
+	pre,table,caption,th,td,form,legend,fieldset,input,button,select,textarea{
+	    margin:0;
+	    padding:0;  
+        font-weight:normal;
+	    font-style:normal;
+	    font-size:100%;
+	    font-family:inherit;
+	    }  
+    ol,ul,li{
+	    list-style:none;
+	    }  
+    img{
+	    border:0;
+	    }  
+    body{
+	    color:#000;
+	    background:#FFF;
+	    font:12px/1.5Arial,Helvetica,sans-serif;
+	    }  
+
+		
+    .clear{
+	    clear:both;
+	    content:'';
+	    display: block;
+	    }  
+    .clear:after{
+	    clear:both;
+	    content:'';
+	    display: block;
+	    }
+    .dis{
+	    display:block;
+	    }  
+    .undis{
+	    display:none;
+	    }
+    a{
+	    text-decoration: none;
+	    color: #000;
+        }
+		
+    #header, #mainMenu, #search, #banner, #mainBody, #footer{
+	    width: 976px;
+	    margin: 0 auto;
+	    position: relative;
+        }
+		
+		
+/*此上面代码是初始CSS模板，下面是新写CSS布局框架代码*/
+     
+	 
+	.bg1{
+        font-size：20px;
+        color:red;
+        background-color:pink;
+     }

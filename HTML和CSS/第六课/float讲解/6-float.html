@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*	5.overflow:hidden 清浮动方法；
+	overflow: hidden来清除浮动，它的原意是隐藏多余的东西.
+	overflow:hidden属性相当于是让父级紧贴内容，这样即可紧贴其对象内内容（包括使用float的div盒子），从而实现了清除浮动*/
+
+		.wrap{
+			overflow: hidden;
+		}
+		.wrap div{
+			width: 50px;
+			height: 50px;
+			float: left;
+			background-color: red;
+	
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+	
+	</div>
+</body>
+</html>

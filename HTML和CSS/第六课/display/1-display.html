@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			/*元素会被显示为内联元素，元素前后没有换行符*/
+			display: inline;
+		}
+		span{
+			/*元素将显示为块级元素，此元素前后会带有换行符。*/
+			display: block;
+		}
+		ul{
+			/*去掉默认外边距内边距*/
+			padding: 0;
+			margin: 0;
+			
+		}
+		li{
+			/*内联块级元素, 元素前后没有换行符。可以设置宽度和高度*/
+			display: inline-block;
+			width:100px;
+			height: 50px;
+			border:1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div>div1</div>
+	<div>div2</div>
+	<div>div3</div>
+
+	<span>span1</span>
+	<span>span2</span>
+	<span>span3</span>
+
+	<ul>
+		<li>li1</li>
+		<li>li2</li>
+		<li>li3</li>
+		<li>li4</li>
+	</ul>
+</body>
+</html>

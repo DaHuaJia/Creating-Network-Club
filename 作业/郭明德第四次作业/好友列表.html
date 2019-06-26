@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>好友列表</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		#wrap{
+			margin-left:500px;
+			margin-top:50px;
+		}
+		.grounp{
+			border:2px solid #ccc;
+			height:30px;
+			width:140px;
+			text-align:center;
+			line-height:30px;
+			font-size:23px;
+			cursor:pointer;
+			background:#6633ff;
+		}
+		.mate{
+			font-size:20px;
+			background:#99ff00;
+			width:144px;
+			display:none;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oFed = document.getElementById('friends');
+		var oSud = document.getElementById('students');
+		var oStg = document.getElementById('stranger');
+		var i=0,j=0,k=0;
+		oFed.onclick = function(){
+			if(i==1){
+				box1.style.display = 'none';
+				i=0;
+			}else {
+				box1.style.display = 'block';
+				i=1;
+			}
+		};
+		oSud.onclick = function(){
+			if(j==1){
+				box2.style.display = 'none';
+				j=0;
+			}else {
+				box2.style.display = 'block';
+				j=1;
+			}
+		};
+		oStg.onclick = function(){
+			if(k==1){
+				box3.style.display = 'none';
+				k=0;
+			}else {
+				box3.style.display = 'block';
+				k=1;
+			}
+		};
+	};
+	</script>
+</head>
+<body>
+	<ul id="wrap">
+		<li class="grounp" id="friends">我的好友</li>
+			<ul class="mate" id="box1">
+				<li>abc</li>
+				<li>def</li>
+				<li>ghi</li>
+			</ul>
+		<li class="grounp" id="students">我的同学</li>
+			<ul class="mate" id="box2">
+				<li>123</li>
+				<li>456</li>
+				<li>789</li>
+			</ul>
+		<li class="grounp" id="stranger">陌生人</li>
+			<ul class="mate" id="box3">
+				<li>一二三</li>
+				<li>四五六</li>
+				<li>七八九</li>
+			</ul>
+	</ul>
+</body>
+</html>

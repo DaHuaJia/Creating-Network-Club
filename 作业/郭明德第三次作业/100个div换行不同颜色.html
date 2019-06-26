@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title>100个div</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+		}
+	    div {
+			height:50px;
+			width:50px;
+			position:absolute;
+			color:white;
+			background:#339933;
+			line-height:50px;
+			text-align:center;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var i = -1;
+		var oBtn = document.getElementById('button1');
+		var oDiv = document.getElementsByTagName('div');
+		oBtn.onclick = function(){
+		for ( var k = 0 ; k < 100; k++ ){
+			document.body.innerHTML += '<div>' + k + '</div>';
+			oDiv[k].style.background = '#' + k * 8668;
+			if( k % 10 == 0 ) i ++;
+			if(k <= 10){
+				oDiv[k].style.marginLeft = k * 60 + 'px';
+			}else {
+				oDiv[k].style.marginLeft = (k - i*10) * 60 + 'px';
+				oDiv[k].style.marginTop = i * 60 + 'px';
+			}
+		}
+		oDiv[10].style.marginLeft = 0 + 'px';
+		oDiv[10].style.marginTop = 60 + 'px';
+		};
+	};
+	</script>
+</head>
+<body>
+	<input id="button1" type="button" value="生成div" />
+</body>
+</html>

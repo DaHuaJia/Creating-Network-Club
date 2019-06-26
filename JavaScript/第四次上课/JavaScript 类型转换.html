@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript 类型转换</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	
+		var str = "John";
+
+		console.log(typeof(str));
+		console.log(typeof 3.14 );
+		console.log(typeof [1,2,3,4]);
+		console.log(typeof(myCar));
+		console.log(typeof(false))
+		// 将数字转换为字符串
+		console.log(typeof String(123)); // 显式转换
+		console.log(typeof String(100+200));
+		console.log(typeof(123 + "")); // 隐式转换
+
+
+		console.log( Number("3.14"));
+		console.log(Number(" "));
+		console.log(Number(""));
+		console.log(typeof Number("99 88"));  // Not a Number
+
+
+	/*
+		document.write(parseFloat("10") + "<br>") 
+		document.write(parseFloat("10.00")+ "<br>") 
+		document.write(parseFloat("10.33")+ "<br>") 
+		document.write(parseFloat("34 45 66")+ "<br>") 
+		document.write(parseFloat("   60 ")+ "<br>") 
+		document.write(parseFloat("40 years")+ "<br>")
+		document.write(parseFloat("He was 40")+ "<br>")
+	*/
+
+	/*
+		console.log(parseInt("12345red"));
+		console.log(parseInt("0xA"));
+		console.log(parseInt("56.9"));
+		console.log( parseInt("red"));
+	*/
+
+	// isNaN() 函数 trye false 
+
+	/*
+		var nan = Number("99 88");
+		if(nan !== nan){
+			console.log("Not a Number");
+		}
+
+		if(isNaN(nan)){
+			console.log("Not a Number");
+		}
+
+		document.write(isNaN(123) + "<br/>");
+		document.write(isNaN(-1.23)+ "<br/>");
+		document.write(isNaN(5-2)+ "<br/>");
+		document.write(isNaN(0)+ "<br/>");
+		document.write(isNaN("Hello")+ "<br/>");
+		document.write(isNaN("2005/12/12")+ "<br/>");
+		document.write(isNaN( parseInt("2005/12/12"))+ "<br/>");
+	*/
+
+	/*
+		var y = "abc";      // y 是一个字符串
+		var x = + y;      // x 是一个数字
+		console.log(isNaN(x));
+
+		console.log(Number(true));
+		console.log(Number(false));
+
+		var d = new Date();
+
+		
+		console.log(d.getTime());
+	*/
+	/*
+		console.log("5" + 1);
+		console.log(typeof("5" - 1));
+	*/	
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

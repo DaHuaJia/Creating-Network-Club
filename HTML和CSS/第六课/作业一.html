@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景</title>
+	<style>
+		.wrap{
+			margin:0;/*取消默认的外边距*/
+			width:248px;
+			margin:100px auto 0; /*上边距为100,下边距为0,左右居中*/
+		}
+		.wrap li{
+			list-style: none;/*清除列表的默认格式*/
+
+			width: 60px;
+			height: 70px;
+			border:1px solid #ccc;
+			float:left;
+		}
+		.wrap:after{
+			content:"";
+			display: block;
+			clear: both;
+		}
+		.wrap li div{
+			width:25px;
+			height:25px;
+			margin: 10px auto;
+		}
+		.bg-1{
+			background: url(images/life-service.png) no-repeat 0 0px;
+		}
+		
+		.bg-2{
+			background: url(images/life-service.png) no-repeat 0 -25px;
+		}
+		.bg-3{
+			background: url(images/life-service.png) no-repeat 0 -50px;
+		}
+		.bg-4{
+			background: url(images/life-service.png) no-repeat 0 -75px;
+		}
+		.bg-5{
+			background: url(images/life-service.png) no-repeat 0 -100px;
+		}
+		.bg-6{
+			background: url(images/life-service.png) no-repeat 0 -125px;
+		}
+		.bg-7{
+			background: url(images/life-service.png) no-repeat 0 -150px;
+		}
+		.bg-8{
+			background: url(images/life-service.png) no-repeat 0 -175px;
+		}
+		.bg-9{
+			background: url(images/life-service.png) no-repeat 0 -200px;
+		}
+		.bg-10{
+			background: url(images/life-service.png) no-repeat 0 -225px;
+		}
+		.bg-11{
+			background: url(images/life-service.png) no-repeat 0 -250px;
+		}
+		.bg-12{
+			background: url(images/life-service.png) no-repeat 0 -275px;
+		}
+		
+		li:hover .bg-1{
+			background: url(images/life-service.png) no-repeat -25px 0;
+		}
+		li:hover .bg-2{
+			background: url(images/life-service.png) no-repeat -25px -25px;
+		}
+		li:hover .bg-3{
+			background: url(images/life-service.png) no-repeat -25px -50px;
+		}
+		li:hover .bg-4{
+			background: url(images/life-service.png) no-repeat -25px -75px;
+		}
+		li:hover .bg-5{
+			background: url(images/life-service.png) no-repeat -25px -100px;
+		}
+		li:hover .bg-6{
+			background: url(images/life-service.png) no-repeat -25px -125px;
+		}
+		li:hover .bg-7{
+			background: url(images/life-service.png) no-repeat -25px -150px;
+		}
+		li:hover .bg-8{
+			background: url(images/life-service.png) no-repeat -25px -175px;
+		}
+		li:hover .bg-9{
+			background: url(images/life-service.png) no-repeat -25px -200px;
+		}
+		li:hover .bg-10{
+			background: url(images/life-service.png) no-repeat -25px -225px;
+		}
+		li:hover .bg-11{
+			background: url(images/life-service.png) no-repeat -25px -250px;
+		}
+		li:hover .bg-12{
+			background: url(images/life-service.png) no-repeat -25px -275px;
+		}
+		.bg-desc{
+			font-size:14px;
+			text-align: center;
+			margin: 0;
+		}
+		li .bg-desc:hover{
+			color:red;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<ul class="wrap">
+		<li>
+			<div class="bg-1"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-2"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-3"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-4"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+			
+
+		<li>
+			<div class="bg-5"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-6"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-7"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-8"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+
+		<li>
+			<div class="bg-9"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-10"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-11"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+		<li>
+			<div class="bg-12"></div>
+			<p class="bg-desc">话费</p>
+		</li>
+	</ul>
+</body>
+</html>

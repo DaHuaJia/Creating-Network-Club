@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>系统时间</title>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			//alert(new Date());
+			setInterval(fnTime,1000);    //定时器
+			fnTime();
+			function fnTime(){
+				var myTime = new Date();    //获取当前系统时间
+				var iYear = myTime.getFullYear();    // object is number
+				var iMonth = myTime.getMonth()+1; // 月份是从0开始算的
+				var iDate = myTime.getDate();
+				var iWeek = myTime.getDay();
+				var iHours = myTime.getHours();
+				var iMin = myTime.getMinutes();
+				var iSec = myTime.getSeconds();
+				var Str;
+				var oBody = document.body;
+				if(iWeek==0) iWeek='星期天';
+				if(iWeek==1) iWeek='星期一';
+				if(iWeek==2) iWeek='星期二';
+				if(iWeek==3) iWeek='星期三';
+				if(iWeek==4) iWeek='星期四';
+				if(iWeek==5) iWeek='星期五';
+				if(iWeek==6) iWeek='星期六';
+				Str = iYear+'年'+twoNum(iMonth)+'月'+twoNum(iDate)+'日 '+iWeek+' '+twoNum(iHours)+':'+twoNum(iMin)+':'+twoNum(iSec);
+				oBody.innerHTML = Str;
+		};
+			function twoNum(n){
+				return n<10? '0'+n:n;
+			}
+		};
+	</script>
+</head>
+<body style="font-size:62px;">
+	
+</body>
+</html>

@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>sss</title>
+		<style>
+			* {padding: 0; margin: 0;}
+			#div {
+				width: 800px;
+				height: 500px;
+				margin: 20px auto;
+				position: relative;
+			}
+			img {
+				position: absolute;
+				width: 800px;
+				height: 500px;
+				display: none;
+			}
+			#div a{
+				display: block;
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				line-height: 50px;
+				text-decoration: none;
+				text-align: center;
+				font-size: 40px;
+				font-weight: bold;
+				color: white;
+				background: rgba(255, 0, 0, 0.5);
+			}
+			#div a:hover {
+				background: rgba(255, 0, 0, 0.8);
+			}
+			#left_button {
+				top: 225px;
+				left: 20px;
+			}
+			#right_button {
+				top: 225px;
+				right: 20px;
+			}
+			#div ul {
+				position: absolute;
+				bottom: -50px;
+				left: 325px;
+			}
+			#div ul li{
+				display: block;
+				width: 20px;
+				height: 20px;
+				float: left;
+				background: orange;
+				border-radius: 50%;
+				margin: 10px;
+				position: relative;
+			}
+			#div ul li div {
+				width: 128px;
+				height: 80px;
+				border: 1px solid #ccc;
+				position: absolute;
+				left: -64px;
+				top: -100px;
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload = function () {
+				var oDiv = document.getElementById('div');
+				var oBtn1 = document.getElementById('left_button');
+				var oBtn2 = document.getElementById('right_button');
+				var aImg = oDiv.getElementsByTagName('img');
+				var aLi = oDiv.getElementsByTagName('li');
+				var urlArr = ['url(1.jpg)', 'url(2.jpg)', 'url(3.jpg)', 'url(4.jpg)'];
+				var num = 0;
+
+				for (var i = 0; i < urlArr.length; i++) {
+					aLi[i].index = i;
+				}
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].onmouseover = function () {
+						this.getElementsByTagName('div')[0].style.display = 'block';
+						this.getElementsByTagName('div')[0].style.background = urlArr[this.index];
+						this.getElementsByTagName('div')[0].style.backgroundSize = 'cover';
+					};
+					aLi[i].onmouseout = function () {
+						this.getElementsByTagName('div')[0].style.display = 'none';
+					};
+					aLi[i].onclick = function () {
+						for (var i = 0; i < aImg.length; i++) {
+							aImg[i].style.display = 'none';
+						}
+						aImg[this.index].style.display = 'block';
+						num = this.index;
+					};
+				}
+				oBtn1.onclick = function () {
+					for (var i = 0; i < aImg.length; i++) {
+						aImg[i].style.display = 'none';
+					}
+					num = (--num + aImg.length) % aImg.length;
+					aImg[num].style.display = 'block';
+				};
+				oBtn2.onclick = function () {
+					for (var i = 0; i < aImg.length; i++) {
+						aImg[i].style.display = 'none';
+					}
+					num = ++num % aImg.length;
+					aImg[num].style.display = 'block';
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<div id="div">
+			<img style="display: block" src="1.jpg"/>
+			<img src="2.jpg"/>
+			<img src="3.jpg"/>
+			<img src="4.jpg"/>
+			<a id="left_button" href="#"><</a>
+			<a id="right_button" href="#">></a>
+			<ul>
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

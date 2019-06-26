@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My form one </title>
+	<style>
+	    body{
+		    background-color:rgb(0,225,0);
+		}
+	    *{
+		    margin:0;
+			padding:0;
+		}
+	    h1{
+		    background-color:pink;
+			height:38px;
+			text-align:center;
+			font-family:kaiti;
+		}
+		.body{
+		    border:1px solid #fff;
+			width:350px;
+			margin:0 auto;
+			margin-top:46px;
+		}
+		.head{
+		    height:22px;
+			width:150px;
+			margin-bottom:20px;
+		}
+	</style>
+</head>
+<body>
+    <h1> 欢迎进入江西理工大学应用科学学院官网！</h1>
+	<div class="body">
+	    <div style="color:red;margin-bottom:10px;">校方提示：请认真填写并核对您的个人信息！</div>
+	    <form action="保密测试.html">
+		    姓名:<input class="head" type="text">
+			<br/>
+			性别:<input type="radio" value="male" name="sex" style="margin:0 0 20px 5px;"/>男
+			    <input type="radio" value="female" name="sex" style="margin:0 0 20px 5px;"/>女
+			<br/>
+		    专业班级:<input class="head" type="text"/>
+			<br/>
+			入学时间:<input class="head" type="text"/>
+			<br/>
+			学校职务:<input class="head" type="text"/>
+			<br/>
+			登录地址：
+			<select class="head">
+			    <option value="1" selected >江西理工大学应用科学学院</option>
+				<option value="2">江西理工大学</option>
+				<option value="3">江西理工大学南昌校区</option>
+				<option value="4">江西理工大学西校区</option>
+			</select>
+			<br/>
+			<input type="submit" value="提交" style="color:red;"/>		
+	</div>  <!--这是表单-->
+	<h2 style="color:red;text-align:center;">在验证登录时，请注意周边环境安全！</h2>
+</body>
+</html>

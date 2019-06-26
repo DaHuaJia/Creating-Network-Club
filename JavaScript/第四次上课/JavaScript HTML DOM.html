@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title id="pp">JavaScript HTML DOM</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	
+	</script>
+	<style type="text/css"></style>
+
+</head>
+<body>
+
+	<p>测试    一个测试的节点P
+		<div style="width:100px;height:100px ">div</div>
+	</p>  
+	<script>
+		var parr = document.getElementsByTagName('p');//通过标签名称p获取P的节点数组
+		if(parr.length>0){//如果获取到了节点
+		var s = parr[1];//parr[0]表示取第一个的样式，赋值给s
+		s.style.background='yellow';//如果根据s能够操作说明获取成功
+		}
+	</script>
+	
+	
+	
+	<script type="text/javascript">
+		function getInnerHTML(){
+			document.write(document.getElementById("tr1").innerHTML);
+		}
+	</script>
+	
+	<table border="1">
+		<tr id="tr1"><td>姓</td><td>名</td></tr>
+		<tr id="tr2"><td>郭</td><td>明德</td></tr>
+	</table>
+		<input type="button" onclick="getInnerHTML()" value="提交" />
+	
+
+	
+	<p id="intro">你好世界!</p>
+	<p id="p1">该实例展示了 <b>getElementById</b> 方法!</p>
+	<script>
+		document.getElementById("intro").innerHTML="这是可以通过innerHTML改变的";
+		var x=document.getElementById("intro");
+		var x2=document.getElementById("p1");
+		console.log(x.innerHTML);
+		console.log(x2.innerHTML);
+	</script>
+	
+	
+	
+	<p>你好世界!</p> 
+	<div id="main">
+		<p> DOM 是非常有用的。</p> 
+		<p>该实例展示了  <b>getElementsByTagName</b> 方法</p> 
+	</div>
+	<script>
+	var x=document.getElementById("main");
+	var y=x.getElementsByTagName("p");
+	var i;
+
+	for(i = 0; i < y.length;i++){
+		console.log(y[i]);
+	}
+	</script>
+
+	
+	
+	<p class="pp">你好世界!</p> 
+	<div id="main">
+		<p> DOM 是非常有用的。</p> 
+		<p class="pp">该实例展示了  <b>getElementsByTagName</b> 方法</p> 
+	</div>
+
+	<script>
+	var x=document.getElementById("main");
+	var y=document.getElementsByClassName("pp")[0];
+	var i;
+
+	// for(i = 0; i < y.length;i++){
+	// 	console.log(y[i]);
+	// }
+	console.log(y);
+	</script>
+
+	
+	
+	<p id="intro">你好世界!</p>
+	<p id="p1">该实例展示了 <b>getElementById</b> 方法!</p>
+	<script>
+		var x=document.getElementById("intro");
+		var x2=document.getElementById("p1");
+		x.innerHTML +="abcdef";
+		x.innerHTML +="312312";
+		x.innerHTML +="54fefe";
+	</script>
+
+	
+	
+<img id="image" width="100">
+	<script>
+	var img = document.getElementById("image").id ;
+	img = "image2";
+	console.log(img);
+	</script>
+
+	
+	
+	<p id="p1">Hello World!</p>
+	<p id="p2">Hello World!</p>
+	<script>
+	document.getElementById("p2").style.color="blue";
+	document.getElementById("p2").style.fontFamily="Arial";
+	document.getElementById("p2").style.fontSize="50px";
+	document.getElementById("p2").style.backgroundColor="larger";
+	</script>
+	<p>以上段落通过脚本修改。</p>
+
+	
+	
+	<h1 onclick="this.innerHTML='Ooops!'">点击文本!</h1>
+	<h1 class="h">点击文本!</h1>
+
+	<script>
+		var h1 = document.getElementsByClassName("h")[0];
+
+		h1.onclick = function(){
+			h1.innerHTML = "abc";
+
+		}
+
+	</script>
+
+	
+	
+
+	<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+	<button id="myBtn">点这里</button>
+	<p id="demo"></p>
+	<script>
+		document.getElementById("myBtn").onclick=function(){
+			displayDate();
+		};
+		function displayDate(){
+			document.getElementById("demo").innerHTML=Date();
+		}
+	</script>
+
+
+
+	<div style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+	MouseOver Me
+	</div>
+
+	<script>
+		var div = document.getElementsByTagName("div");
+		div[0].onmouseover = function(){
+			mOver(div[0]);
+		}
+
+		div[0].onmouseout = function(){
+			mOut(div[0]);
+		}
+
+		div[0].onmousedown = function(){
+			div[0].style.color = "blue";
+		}
+
+		div[0].onmouseup = function(){
+			div[0].style.color = "black";
+		}
+
+		var flag = true;
+		div[0].onclick = function(){
+
+			if(flag){
+				div[0].style.width = "300px";
+				div[0].style.height = "300px";
+				flag = false;
+			} else{
+				div[0].style.width = "100px";
+				div[0].style.height = "100px";
+				flag = true;
+			}
+			
+		}
+
+		function mOver(obj){
+			obj.innerHTML="Thank You"
+		}
+		function mOut(obj){
+			obj.innerHTML="Mouse Over Me"
+		}
+	</script>
+
+
+
+	<script type="text/javascript">
+		// var a,b;
+		
+
+		// console.log(a == window.a);
+		// console.log(window.document.getElementById("header") == document.getElementById("header"));
+
+		// alert("sometext");
+		window.confirm("sometext");
+	</script>
+
+	
+	
+ 	<p>点击按钮，显示确认框。</p>
+	<button onclick="myFunction()">点我</button>
+	<p id="demo"></p>
+	<script>
+	function myFunction(){
+		var x;
+		var r=confirm("按下按钮!");
+		if (r==true){
+			x="你按下了\"确定\"按钮!";
+		}
+		else{
+			x="你按下了\"取消\"按钮!";
+		}
+		document.getElementById("demo").innerHTML=x;
+	}
+	</script>
+
+
+
+ 	<p style="margin-left: 0px">单击按钮每3秒出现一个“Hello”警告框。</p>
+	<p>再次点击警告框，经过3秒出现新的警告框，这将一直执行 ...</p>
+	<button onclick="myFunction()">点我</button>
+	<script>
+		function myFunction(){
+			var p1 = document.getElementsByTagName("p")[0];
+			var speed = 3;
+			var timer = setInterval(function(){
+				if(parseInt(p1.style.marginLeft)<300){
+					speed+=2;
+					p1.style.marginLeft = parseInt(p1.style.marginLeft) + speed + "px";
+				}else{
+					speed-=2;
+					p1.style.marginLeft = parseInt(p1.style.marginLeft) + speed + "px";
+				}	
+			},50);
+			setTimeout(function(){
+				clearInterval(timer);
+			},3000);
+		}
+	</script>
+
+	
+
+	<p>点击按钮，在等待 3 秒后弹出 "Hello"。</p>
+	<button onclick="myFunction()">点我</button>
+	<script>
+	var timer;
+	function myFunction(){
+		timer = setTimeout(function(){alert("Hello")},3000);
+		clearTimeout(timer);
+	}
+	</script>
+
+
+</body>
+</html>

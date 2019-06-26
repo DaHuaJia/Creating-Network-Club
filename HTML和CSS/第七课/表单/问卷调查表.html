@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>问卷调查表</title>
+	<link rel="stylesheet" href="问卷调查表.css"/>
+	<style type="text/css">
+	   
+	</style>
+</head>
+<body>
+    <h1>大学生问卷调查表</h1>
+    <div>
+	    <form action="http://www.asc.jx.cn/"/>
+		    姓名：<input type="text" name="姓名" class="form"/>
+            性别：<input type="radio" name="male"/>男
+			      <input type="radio" name="famale"/>女
+            出生年月：<input type="numble" name="birthday" class="form"/>
+			<br/>
+            班级：<input type="text" name="class" class="form"/>
+			工作：<input type="text" name="work" value="学生" class="form"/>
+	        现所在地：<select name="city" class="form">
+			            <option value="1" selected >江西理工大学应用科学学院</option>
+                        <option value="2"/>江西理工大学</option>
+                        <option value="3"/>江西理工大学南昌校区</option>
+                        <option value="4"/>江西理工大学西校区</option>
+                        <option value="5"/>其他	</option>					
+			          </select>
+			<br/>
+			籍贯：<input type="text" name="adder" placeholder="户口所在地" class="form"/>
+			爱好：<input type="checkbox" name="hobby">看书
+			      <input type="checkbox" name="hobby">游戏
+				  <input type="checkbox" name="hobby">旅游
+				  <input type="checkbox" name="hobby">其他
+			特长：<input type="text" name="good" class="form"/>
+			<br/>
+			自我介绍：
+			<textarea rows="15" cols="45" class="form"></textarea>
+			<br/>
+			<button type="button" onclick="alert('此网站危险！')" class="button"><input type="submit" value="提交"/></button>
+			<br/>
+		</form>
+	</div>
+</body>
+</html>

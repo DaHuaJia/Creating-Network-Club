@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title>刮美女</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+		}
+		#img{
+			width:1250px;
+			height:550px;
+			margin:0 auto;
+		}
+	    div {
+			height:50px;
+			width:50px;
+			position:absolute;
+			color:white;
+			background:#ccc;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var i,w = 0,h = -1;
+		var oDiv = document.getElementsByTagName("div");
+		for( i = 0;i <= 274;i++,w++ ){
+			document.body.innerHTML += "<div></div>";
+			if(i % 25 == 0 ){
+				h ++;
+				w = 0;
+			}
+			oDiv[i].style.left = w * 50 + 'px';
+			oDiv[i].style.top = h * 50 + 'px';
+		}
+		for(i = 0;i <= 274; i++){
+			oDiv[i].onmouseover = function(){
+				this.style.display = 'none';
+			};
+		}
+	};
+	</script>
+</head>
+<body>
+	<img id="img" src="1.jpg" />
+</body>
+</html>

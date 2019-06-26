@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景</title>
+	<style>
+		.box1{
+			width:200px;
+			height:200px;
+			border:2px solid #000;
+
+			/*如果背景图片尺寸大于div背景会重复*/
+			background-image:url(images/icon1.png);
+
+			/*让图片水平和竖直方向不重复*/
+			background-repeat: no-repeat;
+		
+			/*图片水平方向50px  竖直方向100px*/
+			background-position: 50px 100px;
+		
+			/*图片水平方向50%	竖直方向50%*/
+			background-position: 50% 50%;
+			
+			/*图片水平方向右边,竖直方向中间*/
+			/*left right center*/
+			background-position: right center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		
+	</div>
+
+</body>
+</html>
